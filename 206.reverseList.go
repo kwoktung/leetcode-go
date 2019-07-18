@@ -11,10 +11,10 @@ package leetcode_go
 func reverseList(head *ListNode) *ListNode {
 	var prev *ListNode
 	for head != nil {
-		node := head
-		head = head.Next
-		node.Next = prev
-		prev = node
+		node := head.Next;
+		head.Next = prev;
+		prev = head
+		head = node;
 	}
 	return prev
 }
